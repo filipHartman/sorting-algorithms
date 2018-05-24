@@ -18,4 +18,11 @@ class SorterTest {
         assertArrayEquals(expectedResult, sorter.bubbleSort(array));
     }
 
+    @Test
+    void recursiveBubbleSort() {
+        int [] array = new int[] {12, 19, 16, 11, 18, 17, 14, 10, 15, 13};
+        int[] expectedResult = new int[] {10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+        assertArrayEquals(expectedResult, sorter.recursiveBubbleSort(array));
+    }
+
 }
