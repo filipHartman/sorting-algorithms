@@ -11,4 +11,24 @@ public class Sorter {
         }
         return array;
     }
+
+    public int[] recursiveBubbleSort(int[] array) {
+        return bubbleSort(array, array.length);
+
+    }
+
+    private int[] bubbleSort(int[] array, int length) {
+        if(length == 1) {
+            return array;
+        }
+
+        for(int i = 0; i <length-1; i++) {
+            if(array[i] > array[i+1]) {
+                int temp = array[i];
+                array[i] = array[i+1];
+                array[i+1] = temp;
+            }
+        }
+        return bubbleSort(array, length-1);
+    }
 }
