@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
@@ -25,6 +24,6 @@ class SorterTest {
     void insertSort() {
         int[] array = new int[] {2, 9, 6, 1, 8, 7, 4, 0, 5, 3};
         int[] expectedResult = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        assertArrayEquals(expectedResult, sorter.insertSort(array));
+        assertArrayEquals(expectedResult, sorter.insertionSort(array));
     }
 }
