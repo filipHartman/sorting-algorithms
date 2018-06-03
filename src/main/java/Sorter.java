@@ -35,7 +35,7 @@ public class Sorter {
         return bubbleSort(array, length-1);
     }
 
-    // Method that sort integers using insertion sort implemented using recursive strategy
+    // Method that sort integers using insertion sort implemented using two loops
     public int[] insertionSort(int[] array) {
         for(int i = 1; i < array.length; i++) {
             int temp = array[i];
@@ -47,6 +47,19 @@ public class Sorter {
             }
             array[j+1] = temp;
         }
+        return array;
+    }
+
+    // Method that sort integers using insertion sort implemented using recursive strategy
+    public int[] recursiveInsertionSort(int[] array) {
+        return insertionSort(array, array.length);
+    }
+
+    private int[] insertionSort(int[] array, int length) {
+        if(length == 1) {
+            return array;
+        }
+
         return array;
     }
 }
