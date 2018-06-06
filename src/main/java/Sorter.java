@@ -51,15 +51,23 @@ public class Sorter {
     }
 
     // Method that sort integers using insertion sort implemented using recursive strategy
-    public int[] recursiveInsertionSort(int[] array) {
-        return insertionSort(array, array.length);
+    public void recursiveInsertionSort(int[] array) {
+        insertionSort(array, array.length);
     }
 
-    private int[] insertionSort(int[] array, int length) {
-        if(length == 1) {
-            return array;
+    private void insertionSort(int[] array, int n) {
+        if(n == 1) {
+            return;
         }
+        insertionSort(array, n - 1);
 
-        return array;
+        int last = array[n-1];
+        int j = n - 2;
+
+        while (j >= 0 && array[j] > last) {
+            array[j+1] = array[j];
+            j--;
+        }
+        array[j+1] = last;
     }
 }
