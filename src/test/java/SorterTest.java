@@ -26,4 +26,12 @@ class SorterTest {
         int[] expectedResult = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         assertArrayEquals(expectedResult, sorter.insertionSort(array));
     }
+
+    @Test
+    void recursiveInsertionSort() {
+        int[] array = new int[] {84, 82, 87, 89, 85, 85, 81};
+        int[] expectedResult = new int[] {81, 82, 84, 85, 85, 87, 89};
+        sorter.recursiveInsertionSort(array);
+        assertArrayEquals(expectedResult, array);
+    }
 }
